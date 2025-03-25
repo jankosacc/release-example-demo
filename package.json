@@ -1,0 +1,31 @@
+{
+  "name": "release-example-demo",
+  "version": "0.0.0",
+  "description": "Release example with automatic versioning and changelog",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "commit": "cz",
+    "release": "commit-and-tag-version",
+    "firstrelease": "commit-and-tag-version --first-release",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "author": "Janis Koselevs <janis.koselevs@accenture.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "commit-and-tag-version": "^12.5.0",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.7",
+    "parcel": "^2.14.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
